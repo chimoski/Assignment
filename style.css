@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   
+}
+body{
+    background: #e9ecef;
+}
+
+
+/* my header and navigation bar */
+
+header{
+    background: #343a40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.container{
+    margin-top: 4rem;
+    padding: .5rem;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.logo{
+    background: #212529;
+    padding: 1.2rem;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul a{
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin: .7rem;
+    color: #fff;
+    padding: 0 .3rem;
+    font-weight: 700;
+    position: relative;
+}
+.navbar ul a::before{
+    content: '';
+    position: absolute;
+   opacity: 0;
+    width: 30px;
+    height: 5px;
+    bottom: 0;
+    left: 8px;
+    top: 20px;
+    background-color: #fff;
+}
+.navbar ul a:hover::before{
+   opacity: 1;
+   transition: opacity .7s;
+}
+
+
+/* my home section */
+#home{
+  
+   margin:0 auto 10rem;
+   max-width: 900px;
+   padding-top: 5rem;
+}
+
+.intro h1{
+    color: #343a40;
+   line-height: 1.5rem; 
+   font-size: 30px; 
+  
+}
+.span{
+    color: red;
+}
+.intro  p{
+    font-size: 14px;
+}
+.myself{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    margin: 1rem .3rem;
+}
+.picture img{
+    width: 200px;
+}
+  #home  p{
+    margin-bottom: 1rem;
+  }
+
+ .fa-solid{
+     font-size: 12px;
+ }
+ .red{
+     color: red;
+ }
+ .blue{
+     color: #343a40 ;
+ }
+bold{
+    font-weight: 900;
+}
+.list{
+    display: flex;
+    gap: .5rem;
+}
+
+/* my contact section */
+#contact{
+  max-width: 900px;
+  margin:  auto;
+  padding-top: 3rem;
+  
+}
+#contact form{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* my register section */
+.heading{
+    text-align: center;
+    margin: 2rem 0;
+    color: #495057;
+    font-weight: 900;
+}
+.form{
+    max-width: 500px;
+    padding: 1rem;
+    background: #e7e9ea;
+    margin: 0 auto;
+  
+}
+
+.form-comp{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+}
+.form-label{
+    margin-bottom: .3rem;
+}
+.form-input{
+    padding: .5rem;
+    border: 1px solid #c5c8cb;
+    outline: none;
+    border-radius: 4px;
+}
+.form-input:valid{
+    border-left: 1px solid green ;
+}
+.form-input:invalid{
+    border-left:1px solid red;
+}
+.submit{
+    width: 100%;
+    padding:.7rem ;
+    background-color:#495057;
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+    margin-top: 2rem;
+}
+.hamburger{
+    display: none;
+}
+.else{
+    text-align: center;
+    margin-top: 1rem;
+}
+.elsebtn{
+    text-align: center;
+    outline: none;
+    width: 100px;
+    background-color: red;
+    color:#fff;
+    font-weight: 900;
+   
+}
+.div{
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.bar{
+    width: 22px;
+    height: 3px;
+    margin: 2px auto;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* my login section here */
+#login{
+   height: 30rem;
+   margin-top: 5rem;
+}
+
+
+
+
+
+@media(max-width:550px) {
+    .hamburger{
+        display: block;
+        margin:0 .5rem;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(3px) rotate(60deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-3px) rotate(-60deg);
+    }
+    .navbar ul{
+        position: fixed;
+        left: 0;
+        top: -100%;
+        gap: 1rem;
+        flex-direction: column;
+        background: rgba(52, 58, 64,.9);
+        text-align: center;
+        transition: top 1s;
+        width: 100%;
+        background: rgba( 52, 58, 64, 0.9 );
+         box-shadow: 0 8px 32px 0 rgba( 52, 58, 64, .4 );
+         backdrop-filter: blur( 1px );
+          -webkit-backdrop-filter: blur( 5px );
+    }
+
+    .navbar ul li {
+        margin: 16px 0;
+    }
+    .navbar ul.active{
+        top: 0;
+    }
+    
+}
+@media(max-width:700px){
+    .myself{
+        display: block;
+    }
+
+}
