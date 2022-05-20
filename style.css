@@ -127,6 +127,10 @@ bold{
     margin-top: 2rem;
     padding: 1rem;
 }
+select{
+    font-size: 14px;
+    color: rgb(132, 129, 129);
+}
 
 /* my register section */
 .heading{
@@ -241,7 +245,7 @@ bold{
         flex-direction: column;
         background: rgba(52, 58, 64,.9);
         text-align: center;
-        transition: top 1s;
+        transition: top .3s;
         width: 100%;
         background: rgba( 52, 58, 64, 0.9 );
          box-shadow: 0 8px 32px 0 rgba( 52, 58, 64, .4 );
