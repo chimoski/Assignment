@@ -16,7 +16,7 @@ textarea{
 }
 
 .container{
-    max-width: 300px;
+    max-width: 400px;
     margin: 2rem auto;
     height: 500px;
     background: #000;
@@ -96,7 +96,7 @@ table{
 .flex-column div,
 span.colored,
 span.equalto{
-   width: 65px;
+   width: 90px;
    height: 60px;
    display: flex;
    justify-content: center;
