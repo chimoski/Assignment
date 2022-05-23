@@ -67,6 +67,7 @@ header{
 }
 
 
+
 /* my home section */
 #home{
   
@@ -78,7 +79,8 @@ header{
 .intro h1{
     color: #343a40;
    line-height: 1.5rem; 
-   font-size: 30px; 
+   font-size: 30px;
+   text-align: center;
   
 }
 .span{
@@ -86,34 +88,34 @@ header{
 }
 .intro  p{
     font-size: 14px;
-}
-.myself{
-    display: grid;
-    grid-template-columns: 30% 60%;
-    margin: 1rem .3rem;
+    text-align: center;
 }
 .picture img{
     width: 200px;
+    
+}
+.picture{
+    grid-row: 1/3;
 }
   #home  p{
     margin-bottom: 1rem;
   }
-
- .fa-solid{
-     font-size: 12px;
- }
  .red{
      color: red;
  }
  .blue{
      color: #343a40 ;
  }
-bold{
-    font-weight: 900;
-}
 .list{
     display: flex;
     gap: .5rem;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   grid-row-gap: 1rem;
+   grid-column-gap:2rem ;
+    margin-top: 5rem;
 }
 
 /* my contact section */
@@ -142,7 +144,10 @@ select{
 .form{
     max-width: 500px;
     padding: 1rem;
+    border-radius: 18px;
     background: #e7e9ea;
+    box-shadow:  5px 5px 30px #989a9a,
+                 -5px -5px 30px #ffffff;
     margin: 0 auto;
   
 }
@@ -265,5 +270,34 @@ select{
     .myself{
         display: block;
     }
+    main p{
+     font-size: 12px;
+    }
 
+    main div span{
+        font-size: 12px;
+    }
+    main{
+        grid-column-gap:.2rem
+    }
+
+}
+@media(max-width:400px) {
+    .picture{
+        grid-row: 1/2
+    }
+    .sentence{
+        grid-column: 1/3
+    }
+    .name{
+        margin-top: 5rem;
+    }
+    .picture{
+        width: 100px;
+    }
+}
+@media(max-width:350px) {
+    main{
+        display: block;
+    }
 }
